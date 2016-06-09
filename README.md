@@ -1,6 +1,6 @@
 # Utils
 常用工具类
-#添加身份证号认证的工具类   摘抄自https://github.com/h4de5ing/AndroidCommon
+#添加身份证号认证的工具类
     matcherPhoneNum 判断手机号格式 (匹配11数字,并且13-19开头)
     matcherAccount 判断账号格式 (4-20位字符)
     matcherPassword 判断密码格式 (6-12位字母或数字)
