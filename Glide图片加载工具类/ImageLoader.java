@@ -9,7 +9,7 @@ import com.bumptech.glide.Glide;
  * Created by xinghe on 16/6/13.
  * Glide图片加载的工具类
  */
-public class GlideImageLoader {
+public class ImageLoader {
     //设置加载时自定义的图片
     private  int DEFAULT_IMAGE = R.mipmap.ic_launcher;
     //设置加载错误时自定义的的图片
