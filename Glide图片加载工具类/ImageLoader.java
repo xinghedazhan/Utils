@@ -16,15 +16,15 @@ public class ImageLoader {
     private  int ERROR_IMAGE = R.mipmap.ic_launcher;
 
     //静态内部类单例模式    不仅能够保证线程安全，也能够保证单例对象的唯一性，同时也延迟了单例的实例化
-    private GlideImageLoader(){}
-    public static GlideImageLoader getInstance(){
+    private ImageLoader(){}
+    public static ImageLoader getInstance(){
         return GlideImageLoaderInner.mInstance;
     }
     /**
      * 静态内部类
      */
     private static class GlideImageLoaderInner{
-        private static final GlideImageLoader mInstance=new GlideImageLoader();
+        private static final ImageLoader mInstance=new ImageLoader();
     }
     /**
      * 加载普通网络图片
