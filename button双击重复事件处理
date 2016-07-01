@@ -1,0 +1,47 @@
+添加标志位判断是否执行Button内的标志位
+
+原理：每次点击button的时候，获取当前的时间，然后对比上一次的时间，两者的差值如果小于某个规定的时间，则判断为快速点击。
+
+
+public class NoFastClickUtils {
+
+               private  static long lastClickTime=0;//上次点击的时间
+
+               private  static int spaceTime = 1000;//时间间隔
+
+               public  static boolean isFastClick() {
+
+                           long currentTime = System.currentTimeMillis();//当前系统时间
+
+                           boolean isAllowClick;//是否允许点击
+
+                          if (currentTime - lastClickTime > spaceTime) {
+
+                                      isAllowClick= false;
+
+                           } else {
+
+                                      isAllowClick = true;
+
+                             }
+ lastClickTime = currentTime;
+
+                          return isAllowClick;
+
+    }
+
+}
+
+使用方法：
+
+在Button的点击事件里面加入如下代码：
+
+if(NoFastClickUtils.isDoubleClick()) {
+
+//快速点击后的逻辑，可以提示用户点击太快，休息一会
+
+}else{
+
+//正常点击的逻辑
+
+}
