@@ -29,7 +29,10 @@ public class ImageLoader {
     /**
      * 加载普通网络图片
      */
-    public void loadImage(Context context, String url, ImageView imageView) {
+     public  static void loadImage(Context context, String url, ImageView imageView) {
+        getInstance().loadImage(context,url,imageView);
+    }
+    private void loadImage(Context context, String url, ImageView imageView) {
         Glide.with(context)
                 .load(url)
                 .placeholder(DEFAULT_IMAGE)
@@ -41,7 +44,10 @@ public class ImageLoader {
     /**
      * 加载圆形图片
      */
-    public  void loadCircleImage(Context context, String url, ImageView imageView) {
+    public static void loadCircleImage(Context context, String url, ImageView imageView) {
+        getInstance().loadCircleImage(context,url,imageView);
+    }
+    private void loadCircleImage(Context context, String url, ImageView imageView) {
         Glide.with(context)
                 .load(url)
                 .placeholder(DEFAULT_IMAGE)
